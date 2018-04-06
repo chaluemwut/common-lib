@@ -4,7 +4,7 @@ public class APIResponse {
 	private int status = 0;
 	private String message = "Ok request";
 	private Object data;
-	private boolean isExpire;
+	private boolean isExpire = false;
 	
 	public int getStatus() {
 		return status;

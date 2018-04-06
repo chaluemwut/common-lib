@@ -4,7 +4,7 @@
 
 	<groupId>commonlib</groupId>
 	<artifactId>commonlib</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<packaging>jar</packaging>
 
 	<name>commonlib</name>

@@ -11,9 +11,9 @@
 	<url>http://maven.apache.org</url>
 
     <scm>
-        <connection>scm:git:https://github.com/chaluemwut/commonbean.git</connection>
-        <developerConnection>scm:git:git@github.com:chaluemwut/commonbean.git</developerConnection>
-        <url>https://github.com/chaluemwut/commonbean</url>
+        <connection>scm:git:https://github.com/chaluemwut/common-lib.git</connection>
+        <developerConnection>scm:git:git@github.com:chaluemwut/common-lib.git</developerConnection>
+        <url>https://github.com/chaluemwut/common-lib</url>
         <tag>HEAD</tag>
     </scm>
 

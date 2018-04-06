@@ -4,15 +4,24 @@
 
 	<groupId>commonlib</groupId>
 	<artifactId>commonlib</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4</version>
 	<packaging>jar</packaging>
 
 	<name>commonlib</name>
 	<url>http://maven.apache.org</url>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+    <scm>
+        <connection>scm:git:https://github.com/chaluemwut/commonbean.git</connection>
+        <developerConnection>scm:git:git@github.com:chaluemwut/commonbean.git</developerConnection>
+        <url>https://github.com/chaluemwut/commonbean</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
 
 	<dependencies>
 		<dependency>
@@ -45,4 +54,40 @@
 		</dependency>
 
 	</dependencies>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-cy6ergn0m-maven</id>
+            <name>bintray-plugins</name>
+            <url>http://dl.bintray.com/cy6ergn0m/maven</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>cy.github</groupId>
+                <artifactId>github-release-plugin</artifactId>
+                <!--mvn package github-release-plugin:gh-upload-->
+                <!--<version>${plugin.version}</version>-->
+
+                <configuration>
+                    <tagName>${project.version}</tagName>
+                    <preRelease>false</preRelease>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>gh-upload</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
